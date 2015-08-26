@@ -1,0 +1,420 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-config Editor\n"
+"POT-Creation-Date: 2015-08-26 18:54+0430\n"
+"PO-Revision-Date: 2015-08-26 18:54+0430\n"
+"Last-Translator: \n"
+"Language-Team: Ehsaan <iehsan.ir@gmail.com>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: languages/common.php:3
+msgid "WP Config Interface"
+msgstr ""
+
+#: languages/common.php:4
+msgid "Edit your WordPress base configuration easily with style ;)"
+msgstr ""
+
+#: wp-config-interface.php:55 wp-config-interface.php:56
+msgid "Edit wp-config.php"
+msgstr ""
+
+#: wp-config-interface.php:70
+msgid "Edit WordPress basic configuration"
+msgstr ""
+
+#: wp-config-interface.php:72
+msgid ""
+"We always make a back-up of wp-config.php before applying your settings, "
+"it'll available in your WordPress directory, called wp-config.backup.php"
+msgstr ""
+
+#: wp-config-interface.php:74
+msgid ""
+"<strong>Attention:</strong> Because your wp-config.php is not writable, I'll "
+"give your configuration source. You have to apply it by yourself."
+msgstr ""
+
+#: wp-config-interface.php:77
+msgid "wp-config.php Updated."
+msgstr ""
+
+#: wp-config-interface.php:77
+msgid "Restore backup"
+msgstr ""
+
+#: wp-config-interface.php:80
+msgid "Backup restored successfully"
+msgstr ""
+
+#: wp-config-interface.php:93
+msgid "Write configurations to wp-config.php"
+msgstr ""
+
+#: wp-config-interface.php:95
+msgid "Generate wp-config.php"
+msgstr ""
+
+#: wp-config-interface.php:109
+msgid "General"
+msgstr ""
+
+#: wp-config-interface.php:110 wp-config-interface.php:234
+msgid "Performance"
+msgstr ""
+
+#: wp-config-interface.php:111
+msgid "Database"
+msgstr ""
+
+#: wp-config-interface.php:112
+msgid "Security"
+msgstr ""
+
+#: wp-config-interface.php:113
+msgid "Posts"
+msgstr ""
+
+#: wp-config-interface.php:114
+msgid "Misc"
+msgstr ""
+
+#: wp-config-interface.php:161
+msgid "Debugging"
+msgstr ""
+
+#: wp-config-interface.php:165
+msgid "Enable debugging"
+msgstr ""
+
+#: wp-config-interface.php:166
+msgid ""
+"When debugging is enabled, all errors, warnings and notices won't missed. "
+"Not recommended on a production site."
+msgstr ""
+
+#: wp-config-interface.php:175
+msgid "Enable errors log"
+msgstr ""
+
+#: wp-config-interface.php:176
+msgid ""
+"When it is enabled, all errors and warnings will be recorded to log file. It "
+"needs Debugging to be enabled."
+msgstr ""
+
+#: wp-config-interface.php:185
+msgid "Display errors, warnings, etc."
+msgstr ""
+
+#: wp-config-interface.php:186
+msgid ""
+"If this option disabled, errors won't displayed. It's enabled by default if "
+"WP_DEBUG is enabled."
+msgstr ""
+
+#: wp-config-interface.php:195
+msgid "Enable scripts debugging"
+msgstr ""
+
+#: wp-config-interface.php:196
+msgid ""
+"If you are planning on modifying some of WordPress' built-in JavaScript or "
+"Cascading Style Sheets, you may need to enable this option."
+msgstr ""
+
+#: wp-config-interface.php:206
+msgid "Automatic updates"
+msgstr ""
+
+#: wp-config-interface.php:210
+msgid "Disable all automatic updates"
+msgstr ""
+
+#: wp-config-interface.php:211
+msgid ""
+"If you want to disable every automatic update, check this. <strong>NOT "
+"SUGGESTED</strong>"
+msgstr ""
+
+#: wp-config-interface.php:220
+msgid "Auto-Update Core"
+msgstr ""
+
+#: wp-config-interface.php:238
+msgid "Memory limit"
+msgstr ""
+
+#: wp-config-interface.php:239
+msgid ""
+"in Megabytes. You can increase/decrease WordPress memory allocate. Caution: "
+"It can take down your site."
+msgstr ""
+
+#: wp-config-interface.php:248
+msgid "Maximum memory limit"
+msgstr ""
+
+#: wp-config-interface.php:249
+msgid ""
+"in Megabytes. When in the administration area, the memory can be increased "
+"or decreased from this."
+msgstr ""
+
+#: wp-config-interface.php:258
+msgid "Block external HTTP requests"
+msgstr ""
+
+#: wp-config-interface.php:259
+msgid ""
+"This will block any future external HTTP requests to the other sites. If "
+"it's enabled, WordPress would block all updates, pings and trackbacks. "
+"<strong>NOT SUGGESTED</strong>"
+msgstr ""
+
+#: wp-config-interface.php:268
+msgid "Cleanup Image Edits"
+msgstr ""
+
+#: wp-config-interface.php:269
+msgid ""
+"If this option is enabled, image edits copies won't created and will "
+"overwrited to original file. <strong>SUGGESTED IF YOU HAVE SPACE LIMIT</"
+"strong>"
+msgstr ""
+
+#: wp-config-interface.php:278
+msgid "Compress CSS"
+msgstr ""
+
+#: wp-config-interface.php:279
+msgid "WordPress will compress all admin style sheets, if this is enabled"
+msgstr ""
+
+#: wp-config-interface.php:288
+msgid "Compress JS"
+msgstr ""
+
+#: wp-config-interface.php:289
+msgid "WordPress will compress all admin Javascript files, if this is enabled"
+msgstr ""
+
+#: wp-config-interface.php:298
+msgid "Concatenate Scripts"
+msgstr ""
+
+#: wp-config-interface.php:299
+msgid ""
+"Enabling this would concatenate all your scripts and style sheets in admin "
+"side. <strong>DISABLING MAY DECREASE PERFORMANCE.</strong>"
+msgstr ""
+
+#: wp-config-interface.php:308
+msgid "Enforce gZip"
+msgstr ""
+
+#: wp-config-interface.php:309
+msgid "Enforces gZip compression technology to all data will sent to browser."
+msgstr ""
+
+#: wp-config-interface.php:321
+msgid "Database name"
+msgstr ""
+
+#: wp-config-interface.php:322
+msgid ""
+"Database schema name for WordPress. <strong style=\"color: red;\">WARNING: "
+"EDITING MAY TAKE DOWN YOUR SITE AND LOSS YOUR DATA.</strong>"
+msgstr ""
+
+#: wp-config-interface.php:331
+msgid "Database username"
+msgstr ""
+
+#: wp-config-interface.php:332
+msgid ""
+"Database authorization username. <strong style=\"color: red;\">WARNING: "
+"EDITING MAY TAKE DOWN YOUR SITE AND LOSS YOUR DATA.</strong>"
+msgstr ""
+
+#: wp-config-interface.php:341
+msgid "Database charset"
+msgstr ""
+
+#: wp-config-interface.php:342
+msgid ""
+"Database charset. <strong style=\"color: red;\">WARNING: EDITING MAY TAKE "
+"DOWN YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>"
+msgstr ""
+
+#: wp-config-interface.php:351
+msgid "Database collation"
+msgstr ""
+
+#: wp-config-interface.php:352
+msgid ""
+"Database collation. <strong style=\"color: red;\">WARNING: EDITING MAY TAKE "
+"DOWN YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>"
+msgstr ""
+
+#: wp-config-interface.php:365
+msgid ""
+"Because of security issues, we can't show security salts. If you need to "
+"regenerate them, just click \"Regenerate Salts\" button."
+msgstr ""
+
+#: wp-config-interface.php:369 wp-config-interface.php:371
+msgid "Regenerate Salt"
+msgstr ""
+
+#: wp-config-interface.php:370
+msgid ""
+"Regenerating salts will cause invalidation of all cookies and make your "
+"users and you to log in again. Salts will be generated with official "
+"WordPress API."
+msgstr ""
+
+#: wp-config-interface.php:377
+msgid "Force SSL for users login"
+msgstr ""
+
+#: wp-config-interface.php:378
+msgid ""
+"If you're planning to give your users a chance to feel the safe, you may "
+"want to enable this option."
+msgstr ""
+
+#: wp-config-interface.php:387
+msgid "Force SSL for admin"
+msgstr ""
+
+#: wp-config-interface.php:388
+msgid "If you want your admin environment so secure, enable this option."
+msgstr ""
+
+#: wp-config-interface.php:397
+msgid "Disallow file edits"
+msgstr ""
+
+#: wp-config-interface.php:398
+msgid ""
+"Occasionally you may wish to disable the plugin or theme editor to prevent "
+"overzealous users from being able to edit sensitive files and potentially "
+"crash the site."
+msgstr ""
+
+#: wp-config-interface.php:410
+msgid "Empty Trash"
+msgstr ""
+
+#: wp-config-interface.php:411
+msgid ""
+"It controls the number of days before WordPress permanently deletes posts, "
+"pages, etc. in trash bin."
+msgstr ""
+
+#: wp-config-interface.php:420
+msgid "Autosave interval"
+msgstr ""
+
+#: wp-config-interface.php:421
+msgid "in seconds. Delay between each autosave while editing a post."
+msgstr ""
+
+#: wp-config-interface.php:433
+msgid "Allow Multisite"
+msgstr ""
+
+#: wp-config-interface.php:434
+msgid ""
+"Enable the Multisite feature, which allows you to create multiple sites with "
+"one WordPress installation."
+msgstr ""
+
+#: wp-config-interface.php:443
+msgid "Disable Cron"
+msgstr ""
+
+#: wp-config-interface.php:444
+msgid ""
+"Disable the whole WordPress cron system. If you disable the cron, \"Future\" "
+"posts will not published, updates will not be automatic and some plugins may "
+"got broken. <strong>NOT SUGGESTED</strong>"
+msgstr ""
+
+#: wp-config-interface.php:453
+msgid "Alternative Cron"
+msgstr ""
+
+#: wp-config-interface.php:454
+msgid ""
+"Use this, for example, if scheduled posts are not getting published. <a href="
+"\"https://codex.wordpress.org/Editing_wp-config.php#Alternative_Cron\" "
+"target=\"_blank\">More Details »</a>"
+msgstr ""
+
+#: wp-config-interface.php:544 wp-config-interface.php:812
+#: wp-config-interface.php:919
+msgid "Cheating or something?"
+msgstr ""
+
+#: wp-config-interface.php:547 wp-config-interface.php:815
+#: wp-config-interface.php:922
+msgid "This is big boys stuff, not yours. Understood?"
+msgstr ""
+
+#: wp-config-interface.php:563
+msgid "<p>All right, here is your new wp-config!</p>"
+msgstr ""
+
+#: wp-config-interface.php:566
+msgid "New wp-config.php Code"
+msgstr ""
+
+#: wp-config-interface.php:831
+msgid ""
+"<p>I regenerated all salts for you, but wp-config.php is not writable for "
+"me. So you have to copy your wp-config and paste it to your wp-config.</p>"
+msgstr ""
+
+#: wp-config-interface.php:833 wp-config-interface.php:945
+msgid ""
+"<p>If you have any problems, contact your hosting support.<br><a href="
+"\"javascript:;\" onclick=\"window.history.back()\">&larr; Back</a>"
+msgstr ""
+
+#: wp-config-interface.php:850
+msgid "Couldn't get new salts, make sure connection is sustainable"
+msgstr ""
+
+#: wp-config-interface.php:926
+msgid "Backup file doesn't exist."
+msgstr ""
+
+#: wp-config-interface.php:940
+msgid "We couldn't write backup to file"
+msgstr ""
+
+#: wp-config-interface.php:943
+msgid "<p>Here is your backup, sorry I could not write it back.</p>"
+msgstr ""
+
+#: wp-config-interface.php:961
+#, php-format
+msgid ""
+"<span id=\"footer-thankyou\">Thank you for using <a href=\"%s\">WP Config "
+"Editor</a> made by <a href=\"%s\">Ehsaan</a></span>"
+msgstr ""
+
+#: wp-config-interface.php:974
+msgid "wp-config.php Edit page"
+msgstr ""
