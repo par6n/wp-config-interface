@@ -33,6 +33,14 @@ Future enhancements and fixes will tagged as "future" in [Issue Tracker](https:/
 Translations welcome! Translators name will credited in WordPress repository page.
 
 To translate the plugin:
+
 1. Fork the repository
 2. Translate strings with poEdit or anyother software you want.
 3. Send us a pull request :smirk:
+
+
+## Changelog
+20150827 Commit:
+* Fixed an XSS bug in Tabs [Thanks to Babak_T for reporting]
+* Made compatible with WordPress Network
+* Fixed a mistake with `CONFIG_EDITOR_VERSION` [Thanks to Farhan for reporting]

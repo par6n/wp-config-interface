@@ -28,13 +28,23 @@
 $func_setup_constants = function() {
 
 	if ( ! defined( 'CONFIG_EDITOR_VERSION' ) )
-		define( 'CONFIG_VERSION', '1.0' );
+		define( 'CONFIG_EDITOR_VERSION', '1.0' );
 
 	if ( ! defined( 'CONFIG_EDITOR_DIR' ) )
 		define( 'CONFIG_EDITOR_DIR', plugin_dir_path( __FILE__ ) );
 
 };
 $func_setup_constants();
+
+/**
+ * Correct permission for multisite/single site WordPress installations
+ *
+ * @return 				string
+ */
+global $wpcfg_permission;
+$wpcfg_permission = function() {
+	return ( is_multisite() ) ? 'manage_sites' : 'manage_options';
+};
 
 /**
  * Load plugin textdomain
@@ -51,10 +61,12 @@ add_action( 'plugins_loaded', function() {
  * @return 				void
  */
 add_action( 'admin_menu', function() {
+	global $wpcfg_permission;
+
 	add_options_page(
 		__( 'Edit wp-config.php', 'wpcfg' ),
 		__( 'Edit wp-config.php', 'wpcfg' ),
-		'manage_options',
+		$wpcfg_permission(),
 		'edit_wp_config.php',
 		'wpcfg_menu_item'
 	);
@@ -137,7 +149,7 @@ function wpcfg_render_tabs() {
  */
 function wpcfg_render_options() {
 	$options = apply_filters( 'wpcfg_options_before_render', wpcfg_get_options() );
-	$tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'general' );
+	$tab = ( isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'general' );
 	echo '<input type="hidden" name="tab" value="' . $tab . '">';
 
 	// Fire up the render engine...
@@ -538,12 +550,14 @@ function wpcfg_config_writable() {
  * @return 				void
  */
 function wpcfg_check_submit() {
+	global $wpcfg_permission;
+
 	if ( isset( $_POST['action'] ) && $_POST['action'] == 'update_wp-config' ) {
 		$nonce = $_POST['_wpnonce'];
 		if ( ! wp_verify_nonce( $nonce, 'update_wp-config' ) )
 			wp_die( __( 'Cheating or something?', 'wpcfg' ) );
 
-		if ( ! current_user_can( 'manage_options' ) )
+		if ( ! current_user_can( $wpcfg_permission() ) )
 			wp_die( __( 'This is big boys stuff, not yours. Understood?', 'wpcfg' ) );
 
 		$config = wpcfg_generate_config( $_REQUEST );
@@ -806,12 +820,14 @@ require_once(ABSPATH . 'wp-settings.php');
  * @return 					void
  */
 function wpcfg_check_regen_salt() {
+	global $wpcfg_permission;
+
 	if ( isset( $_GET['regen_salt'] ) && isset( $_GET['_wpnonce'] ) ) {
 		$nonce = $_GET['_wpnonce'];
 		if ( ! wp_verify_nonce( $nonce, 'regenerate_salt' ) )
 			wp_die( __( 'Cheating or something?', 'wpcfg' ) );
 
-		if ( ! current_user_can( 'manage_options' ) )
+		if ( ! current_user_can( $wpcfg_permission() ) )
 			wp_die( __( 'This is big boys stuff, not yours. Understood?', 'wpcfg' ) );
 
 		$new_config = wpcfg_regenerate_salt();
@@ -913,12 +929,14 @@ function wpcfg_write_config( $contents ) {
  * @return 					void
  */
 function wpcfg_check_restore_backup() {
+	global $wpcfg_permission;
+	
 	if ( isset( $_GET['restore_backup'] ) && isset( $_GET['_wpnonce'] ) ) {
 		$nonce = $_GET['_wpnonce'];
 		if ( ! wp_verify_nonce( $nonce, 'wpcfg_restore_backup' ) )
 			wp_die( __( 'Cheating or something?', 'wpcfg' ) );
 
-		if ( ! current_user_can( 'manage_options' ) )
+		if ( ! current_user_can( $wpcfg_permission() ) )
 			wp_die( __( 'This is big boys stuff, not yours. Understood?', 'wpcfg' ) );
 
 		$file = ABSPATH . 'wp-config.backup.php';
@@ -972,7 +990,7 @@ add_filter( 'admin_footer_text', 'wpcfg_admin_footer' );
  */
 function wpcfg_action_links( $links ) {
 	$links[] = '<a href="' . esc_url( admin_url( 'options-general.php?page=edit_wp_config.php' ) ) . '">' . __( 'wp-config.php Edit page', 'wpcfg' ) . '</a>';
-	if ( wpcfg_option( 'WPLANG', 'en_US' ) == 'fa_IR' ) {
+	if ( get_locale() == 'fa_IR' ) {
 		$links[] = '<a href="http://forum.wp-parsi.com">پشتیبانی پارسی</a>';
 	}
 
