@@ -51,9 +51,10 @@ $wpcfg_permission = function() {
  *
  * @return 				void
  */
-add_action( 'plugins_loaded', function() {
-	load_plugin_textdomain( 'wpcfg', false, CONFIG_EDITOR_DIR . '/languages/' );
-} );
+function wpcfg_load_textdomain() {
+	load_plugin_textdomain( 'wpcfg', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'wpcfg_load_textdomain' );
 
 /**
  * Add the menu page under "Settings" menu.
@@ -234,7 +235,7 @@ function wpcfg_get_options() {
 				'const' 		=>	'WP_AUTO_UPDATE_CORE',
 				'type' 			=>	'string',
 				'input' 		=>	'select',
-				'options' 		=>	array( 'true' => 'Major and Minor', 'minor' => 'Only Minor releases', 'false' => 'Deactivate' ),
+				'options' 		=>	array( 'true' => __( 'Major and Minor', 'wpcfg' ), 'minor' => __( 'Only Minor releases', 'wpcfg' ), 'false' => __( 'Deactivate', 'wpcfg' ) ),
 				'value' 		=>	wpcfg_option( 'WP_AUTO_UPDATE_CORE', 'minor' ),
 				'id' 			=>	'update_core',
 				'default' 		=>	'minor'
@@ -378,9 +379,9 @@ function wpcfg_get_options() {
 				'input' 		=>	'plain'
 			),
 			'regen_salt' 		=>	array(
-				'name' 			=>	__( 'Regenerate Salt', 'wpcfg' ),
+				'name' 			=>	__( 'Regenerate Salts', 'wpcfg' ),
 				'desc' 			=>	__( 'Regenerating salts will cause invalidation of all cookies and make your users and you to log in again. Salts will be generated with official WordPress API.', 'wpcfg' ),
-				'caption' 		=>	__( 'Regenerate Salt', 'wpcfg' ),
+				'caption' 		=>	__( 'Regenerate Salts', 'wpcfg' ),
 				'class' 		=>	'button',
 				'href' 			=>	add_query_arg( array( 'wpcfg_updated' => false, 'regen_salt' => true, '_wpnonce' => wp_create_nonce( 'regenerate_salt' ) ) ),
 				'input' 		=>	'link'
@@ -470,6 +471,17 @@ function wpcfg_get_options() {
 				'value' 		=>	wpcfg_option( 'ALTERNATE_WP_CRON', false ),
 				'id' 			=>	'alternate_wp_cron',
 				'default' 		=>	false
+			),
+			'fs_method' 		=>	array(
+				'name' 			=>	__( 'Filesystem method', 'wpcfg' ),
+				'desc' 			=>	__( 'If you\'re encountering problems with updating core or installing plugins & themes, change the method. If none of them works, <strong>change it back to Automatic Choice</strong>', 'wpcfg' ),
+				'const' 		=>	'FS_METHOD',
+				'type' 			=>	'string',
+				'input' 		=>	'select',
+				'options' 		=>	array( 'default' => __( 'Automatic choice', 'wpcfg' ), 'direct' => __( 'PHP direct', 'wpcfg' ), 'ssh' => __( 'SSH if extension is enabled', 'wpcfg' ), 'ftpext' => __( 'FTP if extension is enabled', 'wpcfg' ), 'ftpsockets' => __( 'FTP sockets', 'wpcfg' ) ),
+				'value' 		=>	wpcfg_option( 'FS_METHOD', 'default' ),
+				'id' 			=>	'fs_method',
+				'default' 		=>	'default'
 			)
 		)
 	) );

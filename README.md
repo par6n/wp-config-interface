@@ -40,7 +40,13 @@ To translate the plugin:
 
 
 ## Changelog
-20150827 Commit:
+**20150829 Commit:**
+* Translated to Persian by myself
+* Optimized for I18N
+* Added `FS_METHOD` option
+
+
+**20150827 Commit:**
 * Fixed an XSS bug in Tabs [Thanks to Babak_T for reporting]
 * Made compatible with WordPress Network
 * Fixed a mistake with `CONFIG_EDITOR_VERSION` [Thanks to Farhan for reporting]

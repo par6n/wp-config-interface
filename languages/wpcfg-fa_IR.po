@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wp-config Editor\n"
-"POT-Creation-Date: 2015-08-27 00:25+0430\n"
-"PO-Revision-Date: 2015-08-27 00:25+0430\n"
+"POT-Creation-Date: 2015-08-29 10:59+0430\n"
+"PO-Revision-Date: 2015-08-29 10:59+0430\n"
 "Last-Translator: \n"
 "Language-Team: Ehsaan <iehsan.ir@gmail.com>\n"
 "Language: fa_IR\n"
@@ -18,403 +18,513 @@ msgstr ""
 
 #: languages/common.php:3
 msgid "WP Config Interface"
-msgstr ""
+msgstr "رابط‌کاربری پیکربندی وردپرس"
 
 #: languages/common.php:4
 msgid "Edit your WordPress base configuration easily with style ;)"
-msgstr ""
+msgstr "پیکربندی اصلی وردپرس خود را به زیبایی و آسانی ویرایش کنید ;)"
 
-#: wp-config-interface.php:55 wp-config-interface.php:56
+#: wp-config-interface.php:68 wp-config-interface.php:69
 msgid "Edit wp-config.php"
-msgstr ""
+msgstr "ویرایش wp-config.php"
 
-#: wp-config-interface.php:70
+#: wp-config-interface.php:83
 msgid "Edit WordPress basic configuration"
-msgstr ""
+msgstr "ویرایش تنظیمات اساسی وردپرس"
 
-#: wp-config-interface.php:72
+#: wp-config-interface.php:85
 msgid ""
-"We always make a back-up of wp-config.php before applying your settings, "
-"it'll available in your WordPress directory, called wp-config.backup.php"
+"We always make a back-up of wp-config.php before applying your settings, it'll "
+"available in your WordPress directory, called wp-config.backup.php"
 msgstr ""
+"ما همیشه یک پشتیبان از فایل wp-config.php شما قبل از اعمال تنظیمات می‌گیریم. فایل "
+"پشتیبان در مسیر وردپرس شما با نام wp-config.backup.php موجود است"
 
-#: wp-config-interface.php:74
+#: wp-config-interface.php:87
 msgid ""
-"<strong>Attention:</strong> Because your wp-config.php is not writable, I'll "
-"give your configuration source. You have to apply it by yourself."
+"<strong>Attention:</strong> Because your wp-config.php is not writable, I'll give "
+"your configuration source. You have to apply it by yourself."
 msgstr ""
+"<strong>نکته:</strong> به دلیل این‌که فایل wp-config.php شما قابل‌نوشتن نیست، بعد "
+"از اعمال تنظیمات محتویات فایل wp-config.php به شما داده خواهد شد و باید خودتان آن "
+"را اعمال کنید."
 
-#: wp-config-interface.php:77
+#: wp-config-interface.php:90
 msgid "wp-config.php Updated."
-msgstr ""
+msgstr "فایل wp-config.php به‌روز شد."
 
-#: wp-config-interface.php:77
+#: wp-config-interface.php:90
 msgid "Restore backup"
-msgstr ""
-
-#: wp-config-interface.php:80
-msgid "Backup restored successfully"
-msgstr ""
+msgstr "بازگرداندن پشتیبان"
 
 #: wp-config-interface.php:93
+msgid "Backup restored successfully"
+msgstr "پشتیبان با موفقیت بازگردانده شد"
+
+#: wp-config-interface.php:106
 msgid "Write configurations to wp-config.php"
-msgstr ""
+msgstr "نوشتن تنظیمات در wp-config.php"
 
-#: wp-config-interface.php:95
+#: wp-config-interface.php:108
 msgid "Generate wp-config.php"
-msgstr ""
+msgstr "ایجاد wp-config.php جدید"
 
-#: wp-config-interface.php:109
+#: wp-config-interface.php:122
 msgid "General"
-msgstr ""
+msgstr "عمومی"
 
-#: wp-config-interface.php:110 wp-config-interface.php:234
+#: wp-config-interface.php:123 wp-config-interface.php:247
 msgid "Performance"
-msgstr ""
+msgstr "کارایی"
 
-#: wp-config-interface.php:111
+#: wp-config-interface.php:124
 msgid "Database"
-msgstr ""
+msgstr "پایگاه‌داده"
 
-#: wp-config-interface.php:112
+#: wp-config-interface.php:125
 msgid "Security"
-msgstr ""
+msgstr "امنیت"
 
-#: wp-config-interface.php:113
+#: wp-config-interface.php:126
 msgid "Posts"
-msgstr ""
+msgstr "نوشته‌ها"
 
-#: wp-config-interface.php:114
+#: wp-config-interface.php:127
 msgid "Misc"
-msgstr ""
+msgstr "متفرقه"
 
-#: wp-config-interface.php:161
+#: wp-config-interface.php:174
 msgid "Debugging"
-msgstr ""
+msgstr "دیباگ"
 
-#: wp-config-interface.php:165
+#: wp-config-interface.php:178
 msgid "Enable debugging"
-msgstr ""
+msgstr "فعال‌کردن حالت دیباگ"
 
-#: wp-config-interface.php:166
+#: wp-config-interface.php:179
 msgid ""
-"When debugging is enabled, all errors, warnings and notices won't missed. "
-"Not recommended on a production site."
+"When debugging is enabled, all errors, warnings and notices won't missed. Not "
+"recommended on a production site."
 msgstr ""
+"وقتی که حالت دیباگ فعال باشد، خطا‌ها، اخطارها و نکات از دست نمی‌روند. این گزینه در "
+"یک سایت زنده پیشنهاد نمی‌شود."
 
-#: wp-config-interface.php:175
+#: wp-config-interface.php:188
 msgid "Enable errors log"
-msgstr ""
+msgstr "ثبت‌کردن خطاها"
 
-#: wp-config-interface.php:176
+#: wp-config-interface.php:189
 msgid ""
 "When it is enabled, all errors and warnings will be recorded to log file. It "
 "needs Debugging to be enabled."
 msgstr ""
+"وقتی این گزینه فعال باشد، همه‌ی خطاها و اخطارها در یک فایل ثبت می‌شوند. برای "
+"کارکردن این گزینه \"دیباگ\" باید فعال باشد."
 
-#: wp-config-interface.php:185
+#: wp-config-interface.php:198
 msgid "Display errors, warnings, etc."
-msgstr ""
+msgstr "نمایش خطاها، اخطارها و ..."
 
-#: wp-config-interface.php:186
+#: wp-config-interface.php:199
 msgid ""
 "If this option disabled, errors won't displayed. It's enabled by default if "
 "WP_DEBUG is enabled."
 msgstr ""
+"اگر این گزینه غیرفعال شود، خطاها و اخطارها و ... نمایش داده نمی‌شوند. این گزینه "
+"اگر WP_DEBUG فعال باشد هم به طور پیش‌فرض فعال می‌شود."
 
-#: wp-config-interface.php:195
+#: wp-config-interface.php:208
 msgid "Enable scripts debugging"
-msgstr ""
+msgstr "فعال‌کردن دیباگ اسکریپت‌ها"
 
-#: wp-config-interface.php:196
+#: wp-config-interface.php:209
 msgid ""
 "If you are planning on modifying some of WordPress' built-in JavaScript or "
 "Cascading Style Sheets, you may need to enable this option."
 msgstr ""
+"اگر شما قصد دارید که فایل‌های جاوا‌اسکریپت یا CSS وردپرس را ویرایش یا بررسی کنید، "
+"ممکن است که به فعال‌کردن این گزینه نیاز داشته باشید."
 
-#: wp-config-interface.php:206
+#: wp-config-interface.php:219
 msgid "Automatic updates"
-msgstr ""
+msgstr "به‌روزرسانی‌های خودکار"
 
-#: wp-config-interface.php:210
+#: wp-config-interface.php:223
 msgid "Disable all automatic updates"
-msgstr ""
+msgstr "غیرفعال‌کردن همه‌ی به‌روزرسانی‌های خودکار"
 
-#: wp-config-interface.php:211
+#: wp-config-interface.php:224
 msgid ""
-"If you want to disable every automatic update, check this. <strong>NOT "
-"SUGGESTED</strong>"
-msgstr ""
-
-#: wp-config-interface.php:220
-msgid "Auto-Update Core"
-msgstr ""
-
-#: wp-config-interface.php:238
-msgid "Memory limit"
-msgstr ""
-
-#: wp-config-interface.php:239
-msgid ""
-"in Megabytes. You can increase/decrease WordPress memory allocate. Caution: "
-"It can take down your site."
-msgstr ""
-
-#: wp-config-interface.php:248
-msgid "Maximum memory limit"
-msgstr ""
-
-#: wp-config-interface.php:249
-msgid ""
-"in Megabytes. When in the administration area, the memory can be increased "
-"or decreased from this."
-msgstr ""
-
-#: wp-config-interface.php:258
-msgid "Block external HTTP requests"
-msgstr ""
-
-#: wp-config-interface.php:259
-msgid ""
-"This will block any future external HTTP requests to the other sites. If "
-"it's enabled, WordPress would block all updates, pings and trackbacks. "
-"<strong>NOT SUGGESTED</strong>"
-msgstr ""
-
-#: wp-config-interface.php:268
-msgid "Cleanup Image Edits"
-msgstr ""
-
-#: wp-config-interface.php:269
-msgid ""
-"If this option is enabled, image edits copies won't created and will "
-"overwrited to original file. <strong>SUGGESTED IF YOU HAVE SPACE LIMIT</"
+"If you want to disable every automatic update, check this. <strong>NOT SUGGESTED</"
 "strong>"
 msgstr ""
+"اگر می‌خواهید که همه‌ی به‌روزرسانی‌های خودکار را غیرفعال کنید، این گزینه را فعال "
+"کنید. <strong>پیشنهاد نمی‌شود</strong>"
 
-#: wp-config-interface.php:278
-msgid "Compress CSS"
-msgstr ""
+#: wp-config-interface.php:233
+msgid "Auto-Update Core"
+msgstr "به‌روزرسانی خودکار هسته"
 
-#: wp-config-interface.php:279
-msgid "WordPress will compress all admin style sheets, if this is enabled"
-msgstr ""
+#: wp-config-interface.php:238
+msgid "Major and Minor"
+msgstr "نسخه‌های اساسی و کوچک"
 
-#: wp-config-interface.php:288
-msgid "Compress JS"
-msgstr ""
+#: wp-config-interface.php:238
+msgid "Only Minor releases"
+msgstr "فقط نسخه‌های کوچک"
 
-#: wp-config-interface.php:289
-msgid "WordPress will compress all admin Javascript files, if this is enabled"
-msgstr ""
+#: wp-config-interface.php:238
+msgid "Deactivate"
+msgstr "غیرفعال‌کردن"
 
-#: wp-config-interface.php:298
-msgid "Concatenate Scripts"
-msgstr ""
+#: wp-config-interface.php:251
+msgid "Memory limit"
+msgstr "محدودیت حافظه"
 
-#: wp-config-interface.php:299
+#: wp-config-interface.php:252
 msgid ""
-"Enabling this would concatenate all your scripts and style sheets in admin "
-"side. <strong>DISABLING MAY DECREASE PERFORMANCE.</strong>"
+"in Megabytes. You can increase/decrease WordPress memory allocate. Caution: It "
+"can take down your site."
 msgstr ""
+"به مگابایت. شما می‌توانید مقدار حافظه‌ی مجاز وردپرس را خود را کم یا زیاد کنید. "
+"اخطار: ممکن است باعث از کارافتادن سایت شود."
 
-#: wp-config-interface.php:308
-msgid "Enforce gZip"
-msgstr ""
+#: wp-config-interface.php:261
+msgid "Maximum memory limit"
+msgstr "حداکثر محدودیت حافظه"
 
-#: wp-config-interface.php:309
-msgid "Enforces gZip compression technology to all data will sent to browser."
+#: wp-config-interface.php:262
+msgid ""
+"in Megabytes. When in the administration area, the memory can be increased or "
+"decreased from this."
+msgstr "به مگابایت. در محیط مدیریت، این محدودیت می‌تواند کم یا زیاد شود."
+
+#: wp-config-interface.php:271
+msgid "Block external HTTP requests"
+msgstr "جلوگیری از درخواست‌های HTTP خارجی"
+
+#: wp-config-interface.php:272
+msgid ""
+"This will block any future external HTTP requests to the other sites. If it's "
+"enabled, WordPress would block all updates, pings and trackbacks. <strong>NOT "
+"SUGGESTED</strong>"
 msgstr ""
+"این گزینه همه‌ی درخواست‌های خارجی HTTP را غیرفعال می‌کند. اگر این گزینه فعال شود، "
+"وردپرس همه‌ی به‌روزرسانی‌ها، بازتاب‌ها و ... را بلوکه می‌کند. <strong>پیشنهاد نمی‌شود</"
+"strong>"
+
+#: wp-config-interface.php:281
+msgid "Cleanup Image Edits"
+msgstr "حذف ویرایش عکس‌ها"
+
+#: wp-config-interface.php:282
+msgid ""
+"If this option is enabled, image edits copies won't created and will overwrited "
+"to original file. <strong>SUGGESTED IF YOU HAVE SPACE LIMIT</strong>"
+msgstr ""
+"اگر این گزینه فعال باشد، کپی از عکس برای ویرایش ایجاد نمی‌شود و مستقیماً روی فایل "
+"اصلی نوشته می‌شود. <strong>اگر محدودیت فضا دارید، پیشنهاد می‌شود</strong>"
+
+#: wp-config-interface.php:291
+msgid "Compress CSS"
+msgstr "فشرده‌کردن CSS"
+
+#: wp-config-interface.php:292
+msgid "WordPress will compress all admin style sheets, if this is enabled"
+msgstr "وردپرس CSS قسمت مدیریت را فشرده می‌کند."
+
+#: wp-config-interface.php:301
+msgid "Compress JS"
+msgstr "فشرده‌کردن JS"
+
+#: wp-config-interface.php:302
+msgid "WordPress will compress all admin Javascript files, if this is enabled"
+msgstr "وردپرس همه‌ی فایل‌های جاوا اسکریپت را فشرده می‌کند."
+
+#: wp-config-interface.php:311
+msgid "Concatenate Scripts"
+msgstr "الحاق‌کردن اسکریپت‌ها"
+
+#: wp-config-interface.php:312
+msgid ""
+"Enabling this would concatenate all your scripts and style sheets in admin side. "
+"<strong>DISABLING MAY DECREASE PERFORMANCE.</strong>"
+msgstr ""
+"فعال‌کردن این گزینه باعث می‌شود که همه‌ی اسکریپت‌ها یک‌جا ملحق شوند و بارگذاری شوند. "
+"<strong>غیرفعال‌کردن این گزینه باعث کاهش کارایی قسمت مدیریت می‌شود</strong>"
 
 #: wp-config-interface.php:321
-msgid "Database name"
-msgstr ""
+msgid "Enforce gZip"
+msgstr "وادارکردن به استفاده از gZip"
 
 #: wp-config-interface.php:322
+msgid "Enforces gZip compression technology to all data will sent to browser."
+msgstr ""
+"اگر این گزینه فعال باشد، همه‌ی داده‌ها به استفاده از تکنولوژی gZip وادار می‌شوند."
+
+#: wp-config-interface.php:334
+msgid "Database name"
+msgstr "نام پایگاه‌داده"
+
+#: wp-config-interface.php:335
 msgid ""
 "Database schema name for WordPress. <strong style=\"color: red;\">WARNING: "
 "EDITING MAY TAKE DOWN YOUR SITE AND LOSS YOUR DATA.</strong>"
 msgstr ""
+"نام پایگاه‌داده ساخته شده برای وردپرس. <strong style=\"color: red;\">اخطار: "
+"ویرایش‌کردن این قسمت باعث قطع‌شدن سایت و از دست‌رفتن همه‌ی داده‌ها می‌شود</strong>"
 
-#: wp-config-interface.php:331
+#: wp-config-interface.php:344
 msgid "Database username"
-msgstr ""
+msgstr "نام‌کاربری پایگاه‌داده"
 
-#: wp-config-interface.php:332
+#: wp-config-interface.php:345
 msgid ""
-"Database authorization username. <strong style=\"color: red;\">WARNING: "
-"EDITING MAY TAKE DOWN YOUR SITE AND LOSS YOUR DATA.</strong>"
+"Database authorization username. <strong style=\"color: red;\">WARNING: EDITING "
+"MAY TAKE DOWN YOUR SITE AND LOSS YOUR DATA.</strong>"
 msgstr ""
+"نام‌کاربری برای احرازهویت در پایگاه‌داده. <strong style=\"color: red;\">اخطار: "
+"ویرایش‌کردن این قسمت باعث قطع‌شدن سایت و از دست‌رفتن همه‌ی داده‌ها می‌شود</strong>"
 
-#: wp-config-interface.php:341
+#: wp-config-interface.php:354
 msgid "Database charset"
-msgstr ""
+msgstr "نویسه‌‌ی پایگاه‌داده"
 
-#: wp-config-interface.php:342
+#: wp-config-interface.php:355
 msgid ""
-"Database charset. <strong style=\"color: red;\">WARNING: EDITING MAY TAKE "
-"DOWN YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>"
+"Database charset. <strong style=\"color: red;\">WARNING: EDITING MAY TAKE DOWN "
+"YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>"
 msgstr ""
+"نویسه پایگاه‌داده برای خواندن و نوشتن. <strong style=\"color: red;\">اخطار: "
+"ویرایش‌کردن این قسمت باعث قطع‌شدن سایت شما و ایجاد مشکلات جدی می‌شود.</strong>"
 
-#: wp-config-interface.php:351
+#: wp-config-interface.php:364
 msgid "Database collation"
-msgstr ""
-
-#: wp-config-interface.php:352
-msgid ""
-"Database collation. <strong style=\"color: red;\">WARNING: EDITING MAY TAKE "
-"DOWN YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>"
-msgstr ""
+msgstr "Collation پایگاه‌داده"
 
 #: wp-config-interface.php:365
+msgid ""
+"Database collation. <strong style=\"color: red;\">WARNING: EDITING MAY TAKE DOWN "
+"YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>"
+msgstr ""
+"Collation جدول‌های پایگاه‌داده. <strong style=\"color: red;\">اخطار: ویرایش‌کردن این "
+"قسمت باعث قطع‌شدن سایت شما و ایجاد مشکلات جدی می‌شود.</strong>"
+
+#: wp-config-interface.php:378
 msgid ""
 "Because of security issues, we can't show security salts. If you need to "
 "regenerate them, just click \"Regenerate Salts\" button."
 msgstr ""
+"به دلایل امنیتی، نمی‌توانیم Saltهای امنیتی را نمایش دهیم. در صورتی که قصد دارید که "
+"Saltها را تازه‌سازی کنید، کافیست روی دکمه \"تازه‌سازی Saltها\" کلیک کنید."
 
-#: wp-config-interface.php:369 wp-config-interface.php:371
-msgid "Regenerate Salt"
-msgstr ""
+#: wp-config-interface.php:382 wp-config-interface.php:384
+msgid "Regenerate Salts"
+msgstr "تازه‌سازی Saltها"
 
-#: wp-config-interface.php:370
+#: wp-config-interface.php:383
 msgid ""
-"Regenerating salts will cause invalidation of all cookies and make your "
-"users and you to log in again. Salts will be generated with official "
-"WordPress API."
+"Regenerating salts will cause invalidation of all cookies and make your users and "
+"you to log in again. Salts will be generated with official WordPress API."
 msgstr ""
+"تازه‌سازی Saltها باعث بی‌اعتبارشدن کوکی‌ها می‌شوند و کاربران و خود شما باید مجدداً "
+"وارد حساب‌هایشان شوند. Saltها از خود رابط رسمی وردپرس ایجاد می‌شوند."
 
-#: wp-config-interface.php:377
+#: wp-config-interface.php:390
 msgid "Force SSL for users login"
-msgstr ""
+msgstr "اجبار استفاده از SSL برای ورود کاربران"
 
-#: wp-config-interface.php:378
+#: wp-config-interface.php:391
 msgid ""
-"If you're planning to give your users a chance to feel the safe, you may "
-"want to enable this option."
+"If you're planning to give your users a chance to feel the safe, you may want to "
+"enable this option."
 msgstr ""
+"اگر تصمیم‌ دارید که به کاربران خود این شانس رو بدهید که امنیت را احساس کنند، ممکن "
+"است بخواهید این گزینه را فعال کنید."
 
-#: wp-config-interface.php:387
+#: wp-config-interface.php:400
 msgid "Force SSL for admin"
-msgstr ""
+msgstr "اجبار استفاده از SSL برای مدیریت"
 
-#: wp-config-interface.php:388
+#: wp-config-interface.php:401
 msgid "If you want your admin environment so secure, enable this option."
-msgstr ""
-
-#: wp-config-interface.php:397
-msgid "Disallow file edits"
-msgstr ""
-
-#: wp-config-interface.php:398
-msgid ""
-"Occasionally you may wish to disable the plugin or theme editor to prevent "
-"overzealous users from being able to edit sensitive files and potentially "
-"crash the site."
-msgstr ""
+msgstr "اگر محیط مدیریت خود را بسیار امن می‌خواهید، این گزینه را فعال کنید."
 
 #: wp-config-interface.php:410
-msgid "Empty Trash"
-msgstr ""
+msgid "Disallow file edits"
+msgstr "اجازه‌ندادن برای ویرایش فایل‌ها"
 
 #: wp-config-interface.php:411
 msgid ""
-"It controls the number of days before WordPress permanently deletes posts, "
-"pages, etc. in trash bin."
+"Occasionally you may wish to disable the plugin or theme editor to prevent "
+"overzealous users from being able to edit sensitive files and potentially crash "
+"the site."
 msgstr ""
+"گاهی اوقات شما ممکن است بخواهید که ویرایشگر افزونه‌ها و پوسته‌ها را غیرفعال کنید تا "
+"کاربران تازه‌کار نتوانند فایل‌های حساس را ویرایش کنند و متعاقباً سایت شما را خراب "
+"کنند."
 
-#: wp-config-interface.php:420
-msgid "Autosave interval"
-msgstr ""
+#: wp-config-interface.php:423
+msgid "Empty Trash"
+msgstr "خالی‌کردن زباله‌دان"
 
-#: wp-config-interface.php:421
-msgid "in seconds. Delay between each autosave while editing a post."
+#: wp-config-interface.php:424
+msgid ""
+"It controls the number of days before WordPress permanently deletes posts, pages, "
+"etc. in trash bin."
 msgstr ""
+"این گزینه تعداد روزهایی که نوشته‌ها از زباله‌دان برای همیشه پاک می‌شوند را کنترل "
+"می‌کند."
 
 #: wp-config-interface.php:433
-msgid "Allow Multisite"
-msgstr ""
+msgid "Autosave interval"
+msgstr "وقفه بین هر Autosave"
 
 #: wp-config-interface.php:434
+msgid "in seconds. Delay between each autosave while editing a post."
+msgstr ""
+"به ثانیه، وقفه بین هر ذخیره خودکار (Autosave) را هنگام ویرایش نوشته‌ای تعیین کنید."
+
+#: wp-config-interface.php:446
+msgid "Allow Multisite"
+msgstr "فعال‌کردن مولتی‌سایت (شبکه)"
+
+#: wp-config-interface.php:447
 msgid ""
-"Enable the Multisite feature, which allows you to create multiple sites with "
-"one WordPress installation."
+"Enable the Multisite feature, which allows you to create multiple sites with one "
+"WordPress installation."
 msgstr ""
+"وردپرس شبکه به شما این قابلیت را می‌دهد که چندین سایت با یک نصب وردپرس ایجاد کنید."
 
-#: wp-config-interface.php:443
+#: wp-config-interface.php:456
 msgid "Disable Cron"
-msgstr ""
+msgstr "غیرفعال‌کردن کرون"
 
-#: wp-config-interface.php:444
+#: wp-config-interface.php:457
 msgid ""
 "Disable the whole WordPress cron system. If you disable the cron, \"Future\" "
-"posts will not published, updates will not be automatic and some plugins may "
-"got broken. <strong>NOT SUGGESTED</strong>"
+"posts will not published, updates will not be automatic and some plugins may got "
+"broken. <strong>NOT SUGGESTED</strong>"
 msgstr ""
+"این گزینه، سیستم کرون (زمان‌بندی) وردپرس را کاملاً غیرفعال می‌کند. با فعال‌کردن، "
+"پست‌های زمان‌بندی‌شده منتشر نمی‌شوند، به‌روزرسانی‌ها خودکار نخواهند بود و بعضی از "
+"افزونه‌ها ممکن است دچار مشکل شوند. <strong>اکیداً پیشنهاد نمی‌شود</strong>"
 
-#: wp-config-interface.php:453
+#: wp-config-interface.php:466
 msgid "Alternative Cron"
-msgstr ""
+msgstr "استفاده از کرون جایگزین"
 
-#: wp-config-interface.php:454
+#: wp-config-interface.php:467
 msgid ""
 "Use this, for example, if scheduled posts are not getting published. <a href="
-"\"https://codex.wordpress.org/Editing_wp-config.php#Alternative_Cron\" "
-"target=\"_blank\">More Details »</a>"
+"\"https://codex.wordpress.org/Editing_wp-config.php#Alternative_Cron\" target="
+"\"_blank\">More Details »</a>"
 msgstr ""
+"اگر با سیستم زمان‌بندی اصلی وردپرس مشکل دارید، شما می‌توانید این گزینه را فعال "
+"کنید. <a href=\"https://codex.wordpress.org/Editing_wp-config.php#Alternative_Cron"
+"\" target=\"_blank\">جزییات بیشتر »</a>"
 
-#: wp-config-interface.php:544 wp-config-interface.php:812
-#: wp-config-interface.php:919
-msgid "Cheating or something?"
-msgstr ""
+#: wp-config-interface.php:476
+msgid "Filesystem method"
+msgstr "متد Filesystem"
 
-#: wp-config-interface.php:547 wp-config-interface.php:815
-#: wp-config-interface.php:922
-msgid "This is big boys stuff, not yours. Understood?"
-msgstr ""
-
-#: wp-config-interface.php:563
-msgid "<p>All right, here is your new wp-config!</p>"
-msgstr ""
-
-#: wp-config-interface.php:566
-msgid "New wp-config.php Code"
-msgstr ""
-
-#: wp-config-interface.php:831
+#: wp-config-interface.php:477
 msgid ""
-"<p>I regenerated all salts for you, but wp-config.php is not writable for "
-"me. So you have to copy your wp-config and paste it to your wp-config.</p>"
+"If you're encountering problems with updating core or installing plugins & "
+"themes, change the method. If none of them works, <strong>change it back to "
+"Automatic Choice</strong>"
 msgstr ""
+"اگر در بروز‌رسانی یا نصب افزونه و پوسته به مشکل برمی‌خورید این قسمت را تغییر دهید. "
+"اگر هیچ‌یک کار نکرد، <strong>آن را به حالت \"انتخاب خودکار\" بازگردانید</strong>"
 
-#: wp-config-interface.php:833 wp-config-interface.php:945
+#: wp-config-interface.php:481
+msgid "Automatic choice"
+msgstr "انتخاب خودکار"
+
+#: wp-config-interface.php:481
+msgid "PHP direct"
+msgstr "مستقیم از طریق PHP"
+
+#: wp-config-interface.php:481
+msgid "SSH if extension is enabled"
+msgstr "SSH اگر افزونه‌اش فعال باشد"
+
+#: wp-config-interface.php:481
+msgid "FTP if extension is enabled"
+msgstr "FTP اگر افزونه‌اش فعال باشد"
+
+#: wp-config-interface.php:481
+msgid "FTP sockets"
+msgstr "سوکت‌های FTP"
+
+#: wp-config-interface.php:570 wp-config-interface.php:840
+#: wp-config-interface.php:949
+msgid "Cheating or something?"
+msgstr "کلک میزنی یا ...، چیکار میکنی؟"
+
+#: wp-config-interface.php:573 wp-config-interface.php:843
+#: wp-config-interface.php:952
+msgid "This is big boys stuff, not yours. Understood?"
+msgstr "اهه، زرنگی؟"
+
+#: wp-config-interface.php:589
+msgid "<p>All right, here is your new wp-config!</p>"
+msgstr "<p>خیلی خب! این هم wp-config.php جدیدتون!</p>"
+
+#: wp-config-interface.php:592
+msgid "New wp-config.php Code"
+msgstr "wp-config.php جدید"
+
+#: wp-config-interface.php:859
+msgid ""
+"<p>I regenerated all salts for you, but wp-config.php is not writable for me. So "
+"you have to copy your wp-config and paste it to your wp-config.</p>"
+msgstr ""
+"<p>من همه‌ی Saltها رو مجدداً ساختم، اما چون wp-config.php قابل‌نوشتن نبود، فایل رو "
+"میدم که خودتون بنویسید. نوشته زیر رو کپی کنید و توی فایل wp-config.php خودتون "
+"بنویسید.</p>"
+
+#: wp-config-interface.php:861 wp-config-interface.php:975
 msgid ""
 "<p>If you have any problems, contact your hosting support.<br><a href="
 "\"javascript:;\" onclick=\"window.history.back()\">&larr; Back</a>"
 msgstr ""
+"اگر هر مشکلی داشتید، با پشتیبانی میزبان خودتون تماس بگیرید.<br><a href="
+"\"javascript:;\" onclick=\"window.history.back()\">&rarr; بازگشت</a>"
 
-#: wp-config-interface.php:850
+#: wp-config-interface.php:878
 msgid "Couldn't get new salts, make sure connection is sustainable"
 msgstr ""
+"در گرفتن Saltهای جدید مشکلی پیش آمد. مطمئن شوید که اتصال اینترنت سرور قابل‌اعتماد "
+"است"
 
-#: wp-config-interface.php:926
+#: wp-config-interface.php:956
 msgid "Backup file doesn't exist."
-msgstr ""
+msgstr "فایل پشتیبان وجود ندارد"
 
-#: wp-config-interface.php:940
+#: wp-config-interface.php:970
 msgid "We couldn't write backup to file"
-msgstr ""
+msgstr "نتوانستیم فایل پشتیبان را برگردانیم"
 
-#: wp-config-interface.php:943
+#: wp-config-interface.php:973
 msgid "<p>Here is your backup, sorry I could not write it back.</p>"
 msgstr ""
+"<p>این محتویات پشتیبانی شماست. از این‌که نتوانستیم آن را بنوسیم، معذرت می‌خواهیم.</"
+"p>"
 
-#: wp-config-interface.php:961
+#: wp-config-interface.php:991
 #, php-format
 msgid ""
-"<span id=\"footer-thankyou\">Thank you for using <a href=\"%s\">WP Config "
-"Editor</a> made by <a href=\"%s\">Ehsaan</a></span>"
+"<span id=\"footer-thankyou\">Thank you for using <a href=\"%s\">WP Config Editor</"
+"a> made by <a href=\"%s\">Ehsaan</a></span>"
 msgstr ""
+"<span id=\"footer-thankyou\">از این‌که از <a href=\"%s\">رابط‌کاربری تنظیمات "
+"وردپرس</a> که توسط <a href=\"%s\">Ehsaan</a> ساخته‌شده، استفاده می‌کنید، سپاسگزاریم!"
+"</span>"
 
-#: wp-config-interface.php:974
+#: wp-config-interface.php:1004
 msgid "wp-config.php Edit page"
-msgstr ""
+msgstr "ویرایش wp-config.php"
+
+#~ msgid "Regenerate Salt"
+#~ msgstr "تازه‌سازی Saltها"
