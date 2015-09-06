@@ -14,7 +14,7 @@ There is various ways for installing the plugin.
 
 1. [Download the latest developer version](https://github.com/EhsaanF/wp-config-interface/archive/master.zip) from GitHub, copy & paste it to `wp-content/plugins/` directory. Then activate it through WordPress managment.
 2. Clone the repository into `wp-content/plugins/` directory and then activate it through WordPress managment.
-3. *Plugin will uploaded to WordPress repository soon*
+3. [Download latest production version](https://wordpress.org/plugins/config-interface) from WordPress official repository.
 
 ## Usage
 After you made sure that plugin is activated, navigate to Settings > Edit wp-config.php
