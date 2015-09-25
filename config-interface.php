@@ -28,7 +28,7 @@
 $func_setup_constants = function() {
 
 	if ( ! defined( 'CONFIG_EDITOR_VERSION' ) )
-		define( 'CONFIG_EDITOR_VERSION', '1.0' );
+		define( 'CONFIG_EDITOR_VERSION', '1.1' );
 
 	if ( ! defined( 'CONFIG_EDITOR_DIR' ) )
 		define( 'CONFIG_EDITOR_DIR', plugin_dir_path( __FILE__ ) );
