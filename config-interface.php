@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP Config Interface
- * Version: 1.0
+ * Version: 1.1
  * Author: Ehsaan
  * Author URI: http://iehsan.ir/
  * Description: Edit your WordPress base configuration easily with style ;)
@@ -16,7 +16,7 @@
  *
  * @author 				Ehsaan
  * @license 			GPL v2.0 or later
- * @version 			1.0
+ * @version 			1.1
  */
 
 /**
@@ -166,7 +166,7 @@ function wpcfg_render_options() {
  * @return 			array
  */
 function wpcfg_get_options() {
-	global $wpdb;
+	global $table_prefix;
 
 	return apply_filters( 'wpcfg_get_options', array(
 		'general' 				=>	array(
@@ -369,6 +369,16 @@ function wpcfg_get_options() {
 				'value' 		=>	wpcfg_option( 'DB_COLLATE', '' ),
 				'id' 			=>	'db_collation',
 				'default' 		=>	''
+			),
+			'db_prefix' 		=>	array(
+				'name' 			=>	__( 'Tables prefix', 'wpcfg' ),
+				'desc' 			=>	__( 'WordPress tables prefix. <strong style="color: red;">WARNING: EDITING MAY TAKE DOWN YOUR SITE AND CAUSE MAJOR PROBLEMS.</strong>', 'wpcfg' ),
+				'const' 		=>	'NOT_CONST',
+				'type' 			=>	'string',
+				'input' 		=>	'text',
+				'value' 		=>	$table_prefix,
+				'id' 			=>	'db_prefix',
+				'default' 		=>	'--empty string--'
 			)
 		),
 		//===============================================================================================
@@ -388,7 +398,7 @@ function wpcfg_get_options() {
 			),
 			'force_ssl_user' 	=>	array(
 				'name' 			=>	__( 'Force SSL for users login', 'wpcfg' ),
-				'desc' 			=>	__( 'If you\'re planning to give your users a chance to feel the safe, you may want to enable this option.' ),
+				'desc' 			=>	__( 'If you\'re planning to give your users a chance to feel the safe, you may want to enable this option.', 'wpcfg' ),
 				'const' 		=>	'FORCE_SSL_LOGIN',
 				'type' 			=>	'boolean',
 				'input' 		=>	'check',
@@ -398,7 +408,7 @@ function wpcfg_get_options() {
 			),
 			'force_ssl_admin' 	=>	array(
 				'name' 			=>	__( 'Force SSL for admin', 'wpcfg' ),
-				'desc' 			=>	__( 'If you want your admin environment so secure, enable this option.' ),
+				'desc' 			=>	__( 'If you want your admin environment so secure, enable this option.', 'wpcfg' ),
 				'const' 		=>	'FORCE_SSL_ADMIN',
 				'type' 			=>	'boolean',
 				'input' 		=>	'check',
@@ -450,6 +460,16 @@ function wpcfg_get_options() {
 				'input' 		=>	'check',
 				'value' 		=>	wpcfg_option( 'WP_ALLOW_MULTISITE', false ),
 				'id' 			=>	'allow_multisite',
+				'default' 		=>	false
+			),
+			'subdomain_install'	=>	array(
+				'name' 			=>	__( 'Use subdomains (for WordPress network)', 'wpcfg' ),
+				'desc' 			=>	__( 'Enable this option to use subdomains instead of subdirectories for your WordPress network installation.', 'wpcfg' ),
+				'const' 		=>	'SUBDOMAIN_INSTALL',
+				'type' 			=>	'boolean',
+				'input' 		=>	'check',
+				'value' 		=>	wpcfg_option( 'SUBDOMAIN_INSTALL', false ),
+				'id' 			=>	'subdomain_install',
 				'default' 		=>	false
 			),
 			'disable_wp_cron' 	=>	array(
@@ -659,14 +679,14 @@ function wpcfg_generate_config( $data ) {
 	';
 
 	// First add required options
-	$added_options = array( 'db_name', 'db_user', 'db_host', 'db_password', 'db_charset', 'db_collate', 'wp_debug' );
+	$added_options = array( 'db_name', 'db_user', 'db_host', 'db_password', 'db_charset', 'db_collate', 'db_prefix', 'table_prefix', 'wp_debug' ); // Don't add them later.
 	$db_name = ( isset( $config['db_name'] ) ? $config['db_name'] : DB_NAME );
 	$db_user = ( isset( $config['db_user'] ) ? $config['db_user'] : DB_USER );
 	$db_host = ( isset( $config['db_host'] ) ? $config['db_host'] : DB_HOST );
 	$db_charset = ( isset( $config['db_charset'] ) ? $config['db_charset'] : DB_CHARSET );
 	$db_collate = ( isset( $config['db_collate'] ) ? $config['db_collate'] : DB_COLLATE );
 	$db_password = DB_PASSWORD;
-	$table_prefix = $wpdb->prefix;
+	$table_prefix = ( isset( $config['db_prefix'] ) ? $config['db_prefix'] : $wpdb->prefix );
 
 	if ( $_REQUEST['tab'] == 'general' )
 		$wp_debug = ( isset( $config['wp_debug'] ) && $config['wp_debug'] ? bool2str( $config['wp_debug'] ) : 'false' );
@@ -738,6 +758,25 @@ define('NONCE_SALT',       '" . NONCE_SALT . "');
 
 /**#@-*/\r\n
 ";
+	
+	// Add WordPress network constants.
+	if ( defined( 'WP_ALLOW_MULTISITE' ) && WP_ALLOW_MULTISITE == true && defined( 'MULTISITE' ) && MULTISITE == true ) {
+		// We need to add them all.
+		$output .= "
+/**
+ * WordPress Network configuration constants.
+ *
+ * Don't edit them unless you know what are you doing!
+ */
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', " . bool2str( SUBDOMAIN_INSTALL ) . ");
+define('DOMAIN_CURRENT_SITE', '" . DOMAIN_CURRENT_SITE . "');
+define('PATH_CURRENT_SITE', '" . PATH_CURRENT_SITE . "');
+define('SITE_ID_CURRENT_SITE', " . SITE_ID_CURRENT_SITE . ");
+define('BLOG_ID_CURRENT_SITE', " . BLOG_ID_CURRENT_SITE . ");
+\r\n
+";
+	}
 	
 	// Add new options
 	foreach( $config as $key => $value ) {
@@ -988,7 +1027,7 @@ add_action( 'admin_init', 'wpcfg_check_restore_backup', 996 );
  */
 function wpcfg_admin_footer( $text ) {
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'edit_wp_config.php' ) {
-		echo sprintf( __( '<span id="footer-thankyou">Thank you for using <a href="%s">WP Config Editor</a> made by <a href="%s">Ehsaan</a></span>', 'wpcfg' ), 'http://wordpress.org/plugins/wp-config-interface', 'http://iehsan.ir' );
+		echo sprintf( __( '<span id="footer-thankyou">Thank you for using <a href="%s">WP Config Editor</a> made by <a href="%s">Ehsaan</a></span>', 'wpcfg' ), 'http://wordpress.org/plugins/config-interface', 'http://iehsan.ir' );
 	} else {
 		echo $text;
 	}
