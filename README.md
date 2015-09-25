@@ -3,10 +3,8 @@ WordPress Configuration Interface (also known as wp-config.php editor) is an use
 
 It's designed well to utility this file for all WordPress users.
 
-**It's still on beta stages and we don't suggest to use it on production sites.**
-
 ## Requirements
-* PHP >= 5.4
+* PHP >= 5.3
 * WordPress >= 4.0
 
 ## Installation
@@ -40,6 +38,12 @@ To translate the plugin:
 
 
 ## Changelog
+**Version 1.1:**
+* New: `SUBDOMAIN_INSTALL` option
+* New: Tables prefix option
+* Fixed: Some string didn't have text domain.
+* Tweak: Squished a bug when network is enabled, but network options don't save.
+
 **20150829 Commit:**
 * Translated to Persian by myself
 * Optimized for I18N
